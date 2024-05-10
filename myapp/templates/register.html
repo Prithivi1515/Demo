@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} HOME PAGE{% endblock %}
+{% block content %}
+<h1>Add Item</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Add User">
+    </form>
+    <a href="{% url 'user_list' %}">Display</a>
+
+{% endblock %}
